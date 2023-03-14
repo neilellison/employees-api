@@ -1,0 +1,8 @@
+POST http://localhost:3000/departments.json
+Content-Type: application/json
+
+{
+  "name": "Concessions",
+  "manager": "Helen Dubois",
+  "code": 1234
+}
