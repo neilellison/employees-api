@@ -27,10 +27,16 @@ class DepartmentsController < ApplicationController
       manager: params[:manager] || @department.manager,
       code: params[:code] || @department.code
     )
-    if department.valid?
+    if @department.valid?
       render :show
     else 
       render json: {errors: @department.errors.full_messages}, status: :unprocessable_entity
     end  
   end
+
+  def destroy
+    @department = Department.find_by(id: params[:id])
+    @department.destroy
+    render json: {message: "Department Removed"}
+  end  
 end

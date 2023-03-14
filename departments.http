@@ -6,3 +6,18 @@ Content-Type: application/json
   "manager": "Helen Dubois",
   "code": 1234
 }
+
+###
+
+PATCH http://localhost:3000/departments/3.json
+Content-Type: application/json
+
+{
+  "name": "Web Services",
+  "manager": "Peter Jang",
+  "code": 1235
+}
+
+###
+
+DELETE http://localhost:3000/departments/2.json
